@@ -1,0 +1,1 @@
+<x-layouts.app title="Data Barang"><x-page-heading title="Data barang" eyebrow="INVENTARIS PER UNIT" description="Satu barang fisik, satu identitas yang tetap.">@can('assets.create')<a href="{{ route('assets.create') }}" class="btn btn-primary">＋ Catat barang</a>@endcan</x-page-heading><livewire:asset-table/></x-layouts.app>

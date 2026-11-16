@@ -1,0 +1,3 @@
+@extends('auth.layout')
+@section('title','Password baru')
+@section('content')<h2>Buat password baru</h2><p class="muted">Minimal 12 karakter, berisi huruf dan angka.</p><form method="POST" action="{{ route('password.update') }}" class="stack">@csrf<input type="hidden" name="token" value="{{ $request->route('token') }}"><x-field name="email" label="Email" type="email" :value="$request->email" required/><x-field name="password" label="Password baru" type="password" required autocomplete="new-password"/><x-field name="password_confirmation" label="Ulangi password" type="password" required autocomplete="new-password"/><button class="btn btn-primary">Simpan password</button></form>@endsection
